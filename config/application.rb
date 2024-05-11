@@ -1,4 +1,5 @@
 require_relative "boot"
+require 'dotenv/load'
 
 require "rails/all"
 
@@ -17,6 +18,7 @@ module ApiPortoWeb
     # in config/environments, which are processed later.
     #
     config.time_zone = "Asia/Jakarta"
+    config.secret_key_base = ENV['SECRET_KEY_BASE']
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Only loads a smaller set of middleware suitable for API only apps.

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_11_115639) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_11_162353) do
   create_table "projects", charset: "latin1", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -19,6 +19,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_11_115639) do
     t.string "image"
     t.string "github_link"
     t.string "project_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", charset: "latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
