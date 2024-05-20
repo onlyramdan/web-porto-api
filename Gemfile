@@ -24,6 +24,9 @@ gem "puma", "~> 5.0"
 
 gem 'jwt'
 
+#url_validator
+gem 'url_validator'
+
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'figaro'

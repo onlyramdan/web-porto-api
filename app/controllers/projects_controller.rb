@@ -15,6 +15,8 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
+    # render json: project_params
+    # return
     @project = Project.new(project_params)
 
     if @project.save
@@ -46,6 +48,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :description, :start_date, :end_date, :image, :github_link, :project_link)
+      params.permit(:title, :description, :start_date, :end_date, :image, :github_link, :project_link)
     end
 end
